@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.1\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +50,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Business\MusteriBusiness.cs" />
+    <Compile Include="Business\OdaBusiness.cs" />
+    <Compile Include="Business\RezervasyonBusiness.cs" />
+    <Compile Include="Business\YoneticiBusiness.cs" />
+    <Compile Include="DAL\DbBaglanti.cs" />
+    <Compile Include="DAL\MusteriDAL.cs" />
+    <Compile Include="DAL\OdaDAL.cs" />
+    <Compile Include="DAL\RezervasyonDAL.cs" />
+    <Compile Include="DAL\YoneticiDAL.cs" />
+    <Compile Include="EntityLayer\MusteriEntityLayer.cs" />
+    <Compile Include="EntityLayer\OdaEntityLayer.cs" />
+    <Compile Include="EntityLayer\RezervasyonEntityLayer.cs" />
+    <Compile Include="EntityLayer\YoneticiEntityLayer.cs" />
+    <Compile Include="Presentation\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentation\AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AnaSayfa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +105,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

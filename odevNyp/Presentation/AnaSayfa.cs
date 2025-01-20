@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace odevNyp
+namespace odevNyp.Presentation
 {
-    public partial class Form1 : Form
+    public partial class AnaSayfa : UserControl
     {
-        public Form1()
+        public AnaSayfa()
         {
             InitializeComponent();
         }
